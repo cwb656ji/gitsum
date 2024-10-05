@@ -19,14 +19,13 @@ services:
     # 镜像地址，测试版的tag为test
     container_name: ani-rss
     # 容器名字
-    hostname: halo
+    hostname: ani-rss
     # 主机名
     volumes:
       - 【这里替换为你的docker数据存放目录】/ani-rss:/config
       # 配置文件目录
       - 【这里替换为你的下载目录】:/downloads
       # 下载的存储路径，可以自定义多个，下载器的容器路径需要和ani-rss保持一致
-    # network_mode: bridge
     environment:
       - PORT=7789
       # 自定义容器端口
